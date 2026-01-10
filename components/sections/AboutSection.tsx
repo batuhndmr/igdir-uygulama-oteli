@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { fadeInUp, slideInFromLeft, slideInFromRight } from "@/lib/animations";
 import { GraduationCap, Users, Award, Bed, Calendar } from "lucide-react";
 
@@ -99,18 +100,30 @@ export function AboutSection() {
             className="relative"
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl group">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 opacity-90" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/* Arka plan görseli */}
+              <Image
+                src="/assets/images/görsel-19.png"
+                alt="Uygulama Oteli"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
+
+              {/* İçerik */}
+             {/*  <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-white text-center p-8">
-                  <div className="w-24 h-24 border-4 border-white/30 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <GraduationCap className="h-12 w-12 text-white/80" />
+                  <div className="w-24 h-24 border-4 border-white/30 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm bg-white/10">
+                    <GraduationCap className="h-12 w-12 text-white/90" />
                   </div>
-                  <p className="text-lg font-semibold">Uygulama Oteli</p>
-                  <p className="text-sm mt-2">30 Oda • 60 Yatak</p>
+                  <p className="text-lg font-semibold drop-shadow-lg">Uygulama Oteli</p>
+                  <p className="text-sm mt-2 drop-shadow-md">30 Oda • 60 Yatak</p>
                 </div>
-              </div>
-              <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div> */}
+
+              {/* Hover efekti */}
+              {/* <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
             </div>
           </motion.div>
         </div>
