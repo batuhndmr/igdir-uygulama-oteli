@@ -29,7 +29,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/images/otel-giris.jpg"
+          src="/assets/images/otel-giris.png"
           alt="Iğdır Uygulama Oteli"
           fill
           priority
