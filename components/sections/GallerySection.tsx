@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 // Tüm görselleri dinamik olarak oluştur
 const generateGalleryItems = () => {
-  const items = [];
+  const items: Array<{ id: string; src: string }> = [];
   // İlk olarak otel-giris.png'yi ekle
   items.push({
     id: "otel-giris",
@@ -32,7 +32,7 @@ const INITIAL_DISPLAY_COUNT = 6; // İlk gösterilecek görsel sayısı
 
 // Başlangıç görselleri - oteli anlatan görseller
 const getInitialDisplayItems = () => {
-  const initialItems = [];
+  const initialItems: Array<{ id: string; src: string }> = [];
   
   // İlk görsel olarak otel-giris.png'yi ekle (allGalleryItems'ın ilk elemanı)
   initialItems.push(allGalleryItems[0]);
